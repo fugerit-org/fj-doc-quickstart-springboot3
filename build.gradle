@@ -11,11 +11,15 @@ sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-cache'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.fugerit.java:fj-doc-base:1.0.2-rc.001'
+	implementation 'org.fugerit.java:fj-doc-mod-fop:1.0.2-rc.001'
+	implementation 'org.fugerit.java:fj-doc-quickstart-b-freemarker:0.8.9'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
