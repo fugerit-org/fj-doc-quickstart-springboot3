@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>org.fugerit.java</groupId>
+	<artifactId>fj-doc-quickstart-springboot3</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>fj-doc-quickstart-demo-springboot3</name>
+	<description>Demo project for Fugerit Venus with Spring Boot 3</description>
+	<properties>
+		<java.version>17</java.version>
+		<fj-doc-version>1.0.2-rc.001</fj-doc-version>
+		<fj-doc-quickstart-version>0.8.9</fj-doc-quickstart-version>
+	</properties>
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-doc-mod-fop</artifactId>
+			<version>${fj-doc-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-doc-quickstart-b-freemarker</artifactId>
+			<version>${fj-doc-quickstart-version}</version>
+		</dependency>
+
+<dependency>
+    <groupId>xerces</groupId>
+    <artifactId>xercesImpl</artifactId>
+    <version>2.8.0</version>
+</dependency>
+
+<dependency>
+    <groupId>xalan</groupId>
+    <artifactId>xalan</artifactId>
+    <version>2.7.1</version>
+</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.graalvm.buildtools</groupId>
+				<artifactId>native-maven-plugin</artifactId>
+				  <configuration>
+				    <imageName>${project.artifactId}</imageName>
+				    <mainClass>${exec.mainClass}</mainClass>
+				    <buildArgs> 
+				      <buildArg>--no-fallback</buildArg>
+				    </buildArgs> 
+				  </configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
